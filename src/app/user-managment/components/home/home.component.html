@@ -1,0 +1,75 @@
+<section class="my-5">
+    <div class="row">
+        <div class=" col-xxl-9 col-xl-9 col-lg-9 col-md-8 col-sm-12 col-xs-12">
+            <div class="row mb-4">
+                <ng-container *ngFor="let item of [1,2,3,4] let frist=first let odd = odd">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                      <div class="card rounded-4 px-2" [ngClass]="frist?'active':''">
+                          <div class="card-body">
+                            <h2 class="card-title">71,028</h2>
+                            <h6 class="card-text">Total Value</h6>
+                            <span [ngClass]="odd?'open':'close'">2%</span>
+                          </div>
+                        </div>
+                    </div>
+                  </ng-container>
+            </div>
+
+            <div>
+                <p-tabView>
+                    <p-tabPanel header="GRAPH">
+                        <div class="overflow-auto" style="max-height:400px;">
+                            <div>
+                                <ng-container *ngFor="let item of [1,2,3,4]">
+                                    <div class="card rounded-5 p-3 mb-3 w-100">
+                                        <div class=" d-flex align-items-center justify-content-between border-bottom pb-2 w-100">
+                                            <div class=" d-flex align-items-center w-100">
+                                                <img src="assets/icons/home-col.svg" alt="" width="45px" class="mx-2">
+                                                <h5 class="card-title">STATION NAME DUMMY</h5>
+                                            </div>
+                                            <img src="assets/icons/menu.svg" alt="" width="20px">
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <thead class="bg-primary w-100">
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>Total Sales</td>
+                                                    <td>62,721</td>
+                                                    <td>Compression State</td>
+                                                    <td>Compression</td>
+                                                    <td>Max Transaction / hour</td>
+                                                    <td>20</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Total Sales</td>
+                                                    <td>550 <span class="mx-1">EGP</span></td>
+                                                    <td>Total Transaction Count</td>
+                                                    <td>5161</td>
+                                                    <td>Max Transaction Date-Time</td>
+                                                    <td>8-1-2021 | 10:16 PM</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </p-tabPanel>
+                    <p-tabPanel header="LIST">
+                        <div class="card">
+                            <p-chart type="bar" [data]="data" [options]="options"></p-chart>
+                        </div>
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+        </div>
+        <div class=" col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12">
+            <div class="card flex justify-content-center">
+                <p-chart type="radar" [data]="data" [options]="options"></p-chart>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+<div>
+    <app-sidbar  (onToggleSideNav)="onToggleSideNav($event)"></app-sidbar>
+    <app-header></app-header>
+    <div class="body container" [ngClass]="getBodyClass()">
+        <router-outlet></router-outlet>
+    </div>
+    <!-- <div class="container">
+        <router-outlet></router-outlet>
+    </div> -->
+</div>

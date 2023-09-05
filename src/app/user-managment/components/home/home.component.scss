@@ -1,0 +1,26 @@
+.active{
+    background-color: #F4DBD4 !important;
+}
+.card:first-of-type{
+    color: var(--textColor)!important;
+    .card-title{
+        font-size: 30px;
+    }
+}
+.card-title{
+    color: var(--textColor);
+    font-size: 13px;
+}
+table{
+    td{
+        color: var(--textColor);
+        font-size: 13px;
+        border: 0px transparent !important;
+    }
+}
+.open{
+   color:  #FF7F5C !important;
+}
+.close{
+   color:  #00CBC0 !important;
+}

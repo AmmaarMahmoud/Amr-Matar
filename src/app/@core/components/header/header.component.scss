@@ -1,0 +1,18 @@
+nav{
+    background-color: var(--white);
+    .Monitored{
+        color:var(--textColor);
+        font-size: 12px !important;
+    }
+    .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+        background-color: var(--mainColor);
+        color: white !important;
+    }
+    .btn-group{
+        background-color: var(--background);
+        label{
+            color:var(--textColor);
+            font-size: 10px !important;
+        }
+    }
+}

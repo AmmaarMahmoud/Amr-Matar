@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+
+:root{
+    --textColor: #3D5161;
+    --mainColor: #FF7F5C;
+    --background: #F9F5F3;
+    --white: #FFFFFF;
+}
+body{
+    background-color: var(--background) !important;
+}
+
+.p-tabview .p-tabview-panels{
+    background-color: transparent !important;
+}
+.p-tabview .p-tabview-nav{
+    background-color: transparent!important;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 30px;
+    border-bottom: transparent !important;
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link{
+    background-color: #ffffff!important;
+    border-bottom: transparent !important;
+    color: var(--textColor) !important;
+    font-size: 10px !important;
+    border-radius: 40px !important;
+    padding: 10px 20px !important;
+}
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link{
+    background-color: var(--mainColor) !important;
+    color: var(--white) !important;
+    border-radius: 40px !important;
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus{
+    background-color: var(--mainColor) !important;
+    color: var(--white) !important;
+    border-radius: 40px !important;
+}
+.p-tabview .p-tabview-nav .p-tabview-ink-bar {
+    display: none !important;
+}
