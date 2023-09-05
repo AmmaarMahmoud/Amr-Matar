@@ -6,7 +6,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './components/home/home.component';
 import { CoreModule } from '../@core/@core.module';
 import { TabViewModule } from 'primeng/tabview';
-import { ChartModule } from 'primeng/chart';
+import { SharedModule } from '../@shared/shared.module';
 @NgModule({
   declarations: [
     LayoutComponent,
@@ -17,7 +17,7 @@ import { ChartModule } from 'primeng/chart';
     UserManagmentRoutingModule,
     CoreModule,
     TabViewModule,
-    ChartModule
+    SharedModule
   ]
 })
 export class UserManagmentModule { }

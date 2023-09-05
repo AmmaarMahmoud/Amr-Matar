@@ -24,3 +24,9 @@ table{
 .close{
    color:  #00CBC0 !important;
 }
+.progress{
+    height: 5px !important;
+}
+.progress-bar{
+    background-color: var(--mainColor);
+}

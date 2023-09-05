@@ -7,7 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { ArabicDatePipe } from './Pipes/arabic-date.pipe';
 import { ArabicNumberPipe } from './Pipes/arabic-number.pipe';
 import { SplitNameByCommaPipe } from './Pipes/split-name-by-comma.pipe';
+import { RadarComponent } from './components/radar/radar.component';
+import { BarComponent } from './components/bar/bar.component';
 
+import { ChartModule } from 'primeng/chart';
 
 
 @NgModule({
@@ -15,9 +18,11 @@ import { SplitNameByCommaPipe } from './Pipes/split-name-by-comma.pipe';
     ArabicDatePipe,
     ArabicNumberPipe,
     SplitNameByCommaPipe,
-  ],
+    RadarComponent,
+    BarComponent,  ],
   imports: [
     CommonModule,
+    ChartModule,
     NgxSpinnerModule,
     RouterModule,
     ToastrModule.forRoot({
@@ -30,7 +35,9 @@ import { SplitNameByCommaPipe } from './Pipes/split-name-by-comma.pipe';
   exports: [
     ArabicDatePipe, 
     ArabicNumberPipe,
-    SplitNameByCommaPipe
+    SplitNameByCommaPipe,
+    RadarComponent,
+    BarComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
