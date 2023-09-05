@@ -31,3 +31,8 @@ table{
 .progress-bar{
     background-color: var(--mainColor);
 }
+@media(max-width:756px){
+    table{
+        width: 600px !important;
+    }
+}

@@ -1,29 +1,31 @@
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
-    <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()"><img src="assets/icons/PMS.svg" alt="" width="45px" class="mx-2"></button>
-        <div class="logo-text" @fadeInOut *ngIf="collapsed">Angular</div>
-        <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
-            <i class="fal fa-times close-icon"></i>
-        </button>
-    </div>
-    <div class="scrollwrap scrollwrap_delayed">
-        <ul class="sidenav-nav">
-            <li class="sidenav-nav-item" *ngFor="let data of navData">
-    
-                <a class="sidenav-nav-link" 
-                    *ngIf="!data.items || (data.items && data.items.length === 0)"
-                    
-                    routerLinkActive="active"
-                    (click)="shrinkItems(data)"
-                    >
-                    <i class="sidenav-link-icon ms-0"><img src="{{data.icon}}" alt="" width="30px" class="mx-2"></i>
-                    <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
-                        {{data.label}}
-                    </span>
-                </a>
-                <div *ngIf="collapsed && data.items && data.items.length > 0">
-                </div>
-            </li>
-        </ul>
+<div>
+    <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+        <div class="logo-container">
+            <button class="logo" (click)="toggleCollapse()"><img src="assets/icons/PMS.svg" alt="" width="45px" class="mx-2"></button>
+            <div class="logo-text" @fadeInOut *ngIf="collapsed">Angular</div>
+            <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
+                <i class="fal fa-times close-icon"></i>
+            </button>
+        </div>
+        <div class="scrollwrap scrollwrap_delayed">
+            <ul class="sidenav-nav">
+                <li class="sidenav-nav-item" *ngFor="let data of navData">
+        
+                    <a class="sidenav-nav-link" 
+                        *ngIf="!data.items || (data.items && data.items.length === 0)"
+                        
+                        routerLinkActive="active"
+                        (click)="shrinkItems(data)"
+                        >
+                        <i class="sidenav-link-icon ms-0"><img src="{{data.icon}}" alt="" width="30px" class="mx-2"></i>
+                        <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                            {{data.label}}
+                        </span>
+                    </a>
+                    <div *ngIf="collapsed && data.items && data.items.length > 0">
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

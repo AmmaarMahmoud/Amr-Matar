@@ -57,7 +57,7 @@ export class SidbarComponent implements OnInit {
   }
 
   closeSidenav(): void {
-    this.collapsed = false;
+    // this.collapsed = false;
     this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
   }
 
