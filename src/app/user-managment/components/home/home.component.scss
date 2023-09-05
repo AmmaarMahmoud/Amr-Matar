@@ -1,12 +1,13 @@
 .active{
     background-color: #F4DBD4 !important;
 }
-.card:first-of-type{
+.lists{
     color: var(--textColor)!important;
     .card-title{
         font-size: 30px;
     }
 }
+
 .card-title{
     color: var(--textColor);
     font-size: 13px;
